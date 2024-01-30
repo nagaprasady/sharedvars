@@ -1,6 +1,6 @@
 def gitdownload(repo)
 {
-  "https://github.com/intelliqittrainings/{repo}.git"
+  "https://github.com/intelliqittrainings/{repo}"
 }
 def mavenbuild()
 {
