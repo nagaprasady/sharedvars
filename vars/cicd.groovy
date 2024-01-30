@@ -6,8 +6,7 @@ def mavenbuild()
 {
   "sh mvn package"
 }
-stage('continous deployment')
-    {    
-        cicd.tomcatdeploy("sharedlibrary2","172.31.42.144","test2app")
-        
-    }
+def tomcatdeploy(jobname,ip,context)
+{
+  sh "scp  /var/lib/jenkins/workspace/${jobname}/webapp/target/webapp.war ubuntu@${ip}:/var/lib/tomcat9/webapps/${context}.war"
+}
