@@ -6,7 +6,7 @@ def mavenbuild()
 {
   "sh mvn package"
 }
-def runselenium(jobname)
+def tomcatdeploy(jobname,ip,context)
 {
-sh "java -jar /var/lib/jenkins/workspace/${jobname}/testing.jar"
+  sh "scp  /var/lib/jenkins/workspace/${jobname}/webapp/target/webapp.war ubuntu@${ip}:/var/lib/tomcat9/webapps/${context}.war"
 }
