@@ -1,6 +1,6 @@
 def gitdownload(repo)
 {
-  "https://github.com/nagaprasady/sharedvars/{repo}.git"
+  "https://github.com/nagaprasady/{repo}.git"
 }
 def mavenbuild()
 {
