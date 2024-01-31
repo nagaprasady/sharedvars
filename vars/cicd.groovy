@@ -4,7 +4,7 @@ def gitdownload(repo)
 }
 def mavenbuild()
 {
-  "sh mvn package"
+  sh "mvn package"
 }
 def tomcatdeploy(jobname,ip,context)
 {
